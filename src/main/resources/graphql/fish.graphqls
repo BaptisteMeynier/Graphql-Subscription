@@ -1,0 +1,41 @@
+
+
+enum WaterType {
+    SEA,
+    FRESH
+}
+
+
+type Family {
+    id: ID!
+    # Name of the family
+    name: String
+    # Type of water
+    waterType: WaterType
+    # Fish inner the family
+    fishs: [Fish!]
+}
+
+type Fish {
+    id: ID!
+    "Fish name"
+    name: String
+    "Optimal temperature tolered by the fish"
+    temperature: Int
+    "Price of the fish"
+    price: Float
+    "Family of the fish"
+    family: Family
+}
+
+
+
+type Query {
+    # The most Expensive Fish
+    mostExpensiveFish: Fish
+}
+
+
+type Subscription {
+    lastFamily: Family!
+}
