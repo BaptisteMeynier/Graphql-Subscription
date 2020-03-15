@@ -46,11 +46,7 @@ public class FamilyPublisher {
 
     private Runnable newFamilyTick(ObservableEmitter<Family> observableEmitter) {
         return () ->{
-            Iterable<Family> iterable = familyRepository.findAll(Sort.by("id").descending());
-            List<Family> family = StreamSupport.stream(iterable.spliterator(), false).collect(Collectors.toList());
-            if(!family.isEmpty()){
-                observableEmitter.onNext(family.get(0));
-            }
+                observableEmitter.onNext(Family.builder().id(1).name("toto").build());
         };
     }
 

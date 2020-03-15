@@ -69,12 +69,12 @@
                 networkBlip();
                 console.log("web socket opened");
 
-                var query = 'subscription LastFamilySubscription \{ \n' +
-                    '    lastFamily \\{' +
+                var query = 'subscription LastFamilySubscription \{ ' +
+                    '    lastFamily \{' +
                     '       id ' +
                     '       name ' +
-                    '     \\}' +
-                    '\\}';
+                    '     \}' +
+                    '\}';
                 var graphqlMsg = {
                     query: query,
                     variables: {}

@@ -19,6 +19,8 @@ graphql:
     # if you want to @ExceptionHandler annotation for custom GraphQLErrors
     exception-handlers-enabled: true
     contextSetting: PER_REQUEST_WITH_INSTRUMENTATION
+    subscriptions:
+      enabled: true
 graphiql:
   mapping: /graphiql
   endpoint:
